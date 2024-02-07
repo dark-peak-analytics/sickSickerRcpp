@@ -16,31 +16,36 @@ If not running the file after launching sickSickerRcpp.Rproj:
 2. ensure 'src/define_microsim.cpp' is in the working directory
 3. install the "Rcpp" and "RcppArmadillo" packages
 
-Arguments/objects/functions description:
+**Arguments/objects/functions description**:
 
 **Model parameters**:
-v_M_1:   vector of initial states for individuals
-n.i:     number of individuals
-n.t:     total number of cycles to run the model
-v.n:     vector of health state names
-d.c:     discount rate for costs
-d.e:     discount rate for health outcome
-t_p:     vector containing transition probability
-u_vec:   utilities vectors
-c_vec:   costs vectors
-Trt:     treatment status (Boolean scalar, efault is FALSE (no treatment)
-seed:    starting seed number for random number generator (default is 1)
+
+- v_M_1:   vector of initial states for individuals
+- n.i:     number of individuals
+- n.t:     total number of cycles to run the model
+- v.n:     vector of health state names
+- d.c:     discount rate for costs
+- d.e:     discount rate for health outcome
+- t_p:     vector containing transition probability
+- u_vec:   utilities vectors
+- c_vec:   costs vectors
+- Trt:     treatment status (Boolean scalar, efault is FALSE (no treatment)
+- seed:    starting seed number for random number generator (default is 1)
 
 **Rcpp functions**:
-ProbsV_Cpp: estimates transition probabilities.
-SampleV_Cpp: vectorised version of base::sample; batch state transition.
-CostsV_Cpp: estimate state-specific costs.
-EffsV_Cpp: estimate state-specific QALYs.
+
+- ProbsV_Cpp: estimates transition probabilities.
+- SampleV_Cpp: vectorised version of base::sample; batch state transition.
+- CostsV_Cpp: estimate state-specific costs.
+- EffsV_Cpp: estimate state-specific QALYs.
 
 **Rcpp model**:
-MicroSimV_Cpp: defines the sick-sicker model.
 
-**load Rcpp functions**:
+- MicroSimV_Cpp: defines the sick-sicker model.
+
+**Load the Rcpp functions**:
+
+Use the `sourceCpp` function from the `Rcpp` package to source the functions defined in the`.cpp` file.
 
 ```{r}
 Rcpp::sourceCpp(

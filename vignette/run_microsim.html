@@ -367,22 +367,39 @@ elsewhere; <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6349385/" class
 <li>ensure ‘src/define_microsim.cpp’ is in the working directory</li>
 <li>install the “Rcpp” and “RcppArmadillo” packages</li>
 </ol>
-<p>Arguments/objects/functions description:</p>
-<p><strong>Model parameters</strong>: v_M_1: vector of initial states
-for individuals n.i: number of individuals n.t: total number of cycles
-to run the model v.n: vector of health state names d.c: discount rate
-for costs d.e: discount rate for health outcome t_p: vector containing
-transition probability u_vec: utilities vectors c_vec: costs vectors
-Trt: treatment status (Boolean scalar, efault is FALSE (no treatment)
-seed: starting seed number for random number generator (default is
-1)</p>
-<p><strong>Rcpp functions</strong>: ProbsV_Cpp: estimates transition
-probabilities. SampleV_Cpp: vectorised version of base::sample; batch
-state transition. CostsV_Cpp: estimate state-specific costs. EffsV_Cpp:
-estimate state-specific QALYs.</p>
-<p><strong>Rcpp model</strong>: MicroSimV_Cpp: defines the sick-sicker
-model.</p>
-<p><strong>load Rcpp functions</strong>:</p>
+<p><strong>Arguments/objects/functions description</strong>:</p>
+<p><strong>Model parameters</strong>:</p>
+<ul>
+<li>v_M_1: vector of initial states for individuals</li>
+<li>n.i: number of individuals</li>
+<li>n.t: total number of cycles to run the model</li>
+<li>v.n: vector of health state names</li>
+<li>d.c: discount rate for costs</li>
+<li>d.e: discount rate for health outcome</li>
+<li>t_p: vector containing transition probability</li>
+<li>u_vec: utilities vectors</li>
+<li>c_vec: costs vectors</li>
+<li>Trt: treatment status (Boolean scalar, efault is FALSE (no
+treatment)</li>
+<li>seed: starting seed number for random number generator (default is
+1)</li>
+</ul>
+<p><strong>Rcpp functions</strong>:</p>
+<ul>
+<li>ProbsV_Cpp: estimates transition probabilities.</li>
+<li>SampleV_Cpp: vectorised version of base::sample; batch state
+transition.</li>
+<li>CostsV_Cpp: estimate state-specific costs.</li>
+<li>EffsV_Cpp: estimate state-specific QALYs.</li>
+</ul>
+<p><strong>Rcpp model</strong>:</p>
+<ul>
+<li>MicroSimV_Cpp: defines the sick-sicker model.</li>
+</ul>
+<p><strong>Load the Rcpp functions</strong>:</p>
+<p>Use the <code>sourceCpp</code> function from the <code>Rcpp</code>
+package to source the functions defined in the<code>.cpp</code>
+file.</p>
 <pre class="r"><code>Rcpp::sourceCpp(
   file = paste0(
     here::here(),
