@@ -1,2 +1,2 @@
 # sickSickerRcpp
-Rcpp version of the vectorised sick-sicker micro-simulation.
+Rcpp version of the vectorised sick-sicker microsimulation.
