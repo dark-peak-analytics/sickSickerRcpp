@@ -31,6 +31,6 @@ Run the example code in the R script `example_script.R` or the Rmarkdown vignett
 
 These files source the functions defined in 'src/define_microsim.cpp' (also in this repository) and then pass some parameters to the `MicroSimV_Cpp` R function before collating some results. This is intended as a barebones example, a full course is under development.
 
-Code developed by Wael Mohammed at [Dark Peak Analytics](https://darkpeakanalytics.com/).
+Code developed by Wael Mohammed & Robert Smith at [Dark Peak Analytics](https://darkpeakanalytics.com/).
 
 [Dark Peak Analytics](https://darkpeakanalytics.com/) provide consulting services at the intersection of health economics and data-science. Established by Paul Schneider & Robert Smith in 2019, we have experienced high demand and continue to grow the team. Interested in collaborating on a research, teaching or consulting project with us, contact us via [email](contact@darkpeakanalytics.com).
